@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PricProject</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Podkova:regular">
+<!--    <link href="{{ url_for('static', path='/css/style.css') }}" rel="stylesheet">-->
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <main class="page">
+        <div class="page__container _container">
+            <div class="page__main-block main-block">
+                <form method="post">
+                    <label class="main-block__insert-pic insert-pic">
+                        <input type="file" class="insert-pic__input" id="image">
+                        <span class="insert-pic__text">Выберите изображение</span>
+                        <div class="insert-pic__image">
+                        </div>
+
+                    </label>
+                    <div class="main-block__function-pic function-pic">
+                        <div class="function-pic__list-function list-function">
+                            <div class="list-function__burger-base burger-base">открыть</div>
+                            <div class="list-function__base-function base-function">
+                                <button class="base-function__button" id="get_text">извелечь текст</button>
+                                <button class="base-function__button" id="delete_noise">удалить шум</button>
+                                <button class="base-function__button" id="delete_fon">удалить фон</button>
+                                <button class="base-function__button" id="better">улучшить</button>
+                                <div class="base-function__function-resolution function-resolutions">
+                                    <div class="function-resolutions__text">увеличить разрешение</div>
+                                    <div class="function-resolutions__function-resolution-buttons function-resolution-buttons">
+                                        <button class="function-resolution-buttons__button" id="make_big_2">x2</button>
+                                        <button class="function-resolution-buttons__button" id="make_big_3">x3</button>
+                                        <button class="function-resolution-buttons__button" id="make_big_4">x4</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="function-pic__save-function" title="Сохранить" id="save"> сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+
+    </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../static/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.js">
+</script>
+
+</body>
+</html>
+

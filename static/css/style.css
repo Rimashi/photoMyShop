@@ -1,0 +1,321 @@
+* {
+    transition: all 0.3s ease 0s;
+}
+/*------ОБНУЛЕНИЕ-----------------*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 18px;
+    color: black;
+    font-weight: 400;
+    font-family: "Podkova";
+}
+/*-----------------------*/
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+/*----------BEM-BLOCKS------------*/
+._container {
+    flex: 1 1 auto;
+    max-width: 1410px;
+    margin: 0px auto;
+    padding: 15px;
+    box-sizing: content-box;
+    display: flex;
+}
+/* --------PAGE--------- */
+.page {
+    flex: 1 1 auto;
+    margin: 0 0 0px 0;
+    display: flex;
+}
+/* ----------------MAIN-BLOCK-------------------- */
+
+.main-block {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.insert-pic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
+}
+.insert-pic {
+}
+.insert-pic__image {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    background:
+        no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+}
+.insert-pic__image::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        360deg,
+        rgba(255, 255, 255, 1) 2%,
+        rgba(255, 255, 255, 0.4) 10%,
+        rgba(255, 255, 255, 0) 15%
+    );
+}
+.insert-pic__text {
+    display: flex;
+    font-size: 4vw;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.insert-pic__input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.function-pic {
+    padding: 0 15px;
+
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    gap: 15px;
+}
+.list-function {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.burger-base {
+    display: none;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #000;
+    background: #fff;
+    border-radius: 20px;
+    font-family: "Podkova";
+    min-height: 40px;
+    padding: 0 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 118.33px;
+    z-index: 15;
+}
+.burger-base:hover {
+    box-shadow: inset 0 0px 7px 0 rgba(0, 0, 0, 0.5);
+}
+.burger-base::after {
+    content: "";
+    position: absolute;
+
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    z-index: 14;
+    width: inherit;
+    height: -webkit-fill-available;
+    border-radius: 20px;
+}
+.base-function {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+    position: relative;
+}
+@keyframes slide-top {
+    0% {
+        bottom: -500px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+.base-function.flex {
+    display: flex;
+}
+.base-function.active {
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.base-function.nonactive {
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+}
+
+.base-function__button {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #000;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+    border-radius: 20px;
+    font-family: "Podkova";
+    min-height: 40px;
+    padding: 0 15px;
+
+    box-sizing: border-box;
+}
+.base-function__button:hover {
+    box-shadow: inset 0 0px 7px 0 rgba(0, 0, 0, 0.5);
+}
+.base-function__function-resolution {
+}
+.function-resolutions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    justify-content: center;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+    border-radius: 20px;
+    min-height: 40px;
+    padding: 8px 15px;
+}
+.function-resolutions__text {
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    font-family: "Podkova";
+    text-align: center;
+}
+
+.function-resolution-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.function-resolution-buttons__button {
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    font-family: "Podkova";
+    padding: 0 15px;
+    background: #ededed;
+    border-radius: 20px;
+    min-height: 25px;
+    flex: 1;
+}
+.function-resolution-buttons__button:hover {
+    box-shadow: inset 0 0px 6px 0 rgba(0, 0, 0, 0.35);
+}
+.function-pic__save-function {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+    border-radius: 20px;
+    font-family: "Podkova";
+    flex: 0 0 0;
+    min-height: 40px;
+    padding: 0 15px;
+}
+.function-pic__save-function:hover {
+    box-shadow: inset 0 0px 7px 0 rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 800px) {
+    .insert-pic__text {
+        font-size: 6.8vw;
+    }
+    .function-pic__save-function,
+    .function-resolutions__text,
+    .function-resolution-buttons__button,
+    .base-function__button {
+        font-size: 16px;
+    }
+}
+@media (max-width: 700px) {
+    .base-function {
+        width: min-content;
+
+        display: none;
+    }
+    .list-function {
+        overflow: auto;
+    }
+    .base-function__button {
+        flex: 1;
+    }
+    .function-pic {
+        padding: 0 5px;
+    }
+    .burger-base {
+        display: flex;
+    }
+}
+@media (max-width: 600px) {
+    .function-pic__save-function,
+    .function-resolutions__text,
+    .function-resolution-buttons__button,
+    .base-function__button,
+    .burger-base {
+        font-size: 15px;
+    }
+    .burger-base {
+        width: 112.8px;
+    }
+}
